@@ -55,7 +55,6 @@ export const Navbar = () => {
             <div className="hidden md:flex items-center space-x-4">
               {mounted && (
                 <button 
-                  /* FIX 1: Added aria-label */
                   aria-label="Toggle Dark Mode"
                   onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
                   className="p-2 text-gray-500 hover:text-indigo-600 dark:text-gray-400 dark:hover:text-white transition-colors rounded-full hover:bg-gray-100 dark:hover:bg-gray-800"
@@ -64,11 +63,14 @@ export const Navbar = () => {
                 </button>
               )}
               <div className="h-6 w-px bg-gray-200 dark:bg-gray-800 mx-2"></div>
-              <a href="#" className="text-sm font-medium text-gray-900 dark:text-white hover:text-indigo-600 transition-colors">
+              
+              <Link href="/login" className="text-sm font-medium text-gray-900 dark:text-white hover:text-indigo-600 transition-colors">
                 Login
-              </a>
+              </Link>
+              
+              {/* FIXED: Now points to /start-project instead of /process */}
               <Link
-                href="/process"
+                href="/start-project"
                 className="bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-medium py-2 px-5 rounded-lg shadow-sm transition-all"
               >
                 Start Project
@@ -79,7 +81,6 @@ export const Navbar = () => {
             <div className="md:hidden flex items-center gap-4">
               {mounted && (
                 <button 
-                  /* FIX 2: Added aria-label */
                   aria-label="Toggle Dark Mode"
                   onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
                   className="p-2 text-gray-500 hover:text-slate-900 dark:text-gray-400 dark:hover:text-white"
@@ -88,7 +89,6 @@ export const Navbar = () => {
                 </button>
               )}
               <button 
-                /* FIX 3: Added aria-label */
                 aria-label="Open Menu"
                 onClick={() => setIsOpen(true)} 
                 className="p-2 -mr-2 text-slate-600 hover:text-slate-900 dark:text-gray-400 dark:hover:text-white"
@@ -124,7 +124,6 @@ export const Navbar = () => {
                   <span className="font-bold text-lg tracking-tight text-slate-900 dark:text-white">StackCuts</span>
                 </div>
                 <button 
-                  /* FIX 4: Added aria-label */
                   aria-label="Close Menu"
                   onClick={() => setIsOpen(false)} 
                   className="p-2 -mr-2 text-slate-900 dark:text-white hover:opacity-70"
@@ -138,10 +137,11 @@ export const Navbar = () => {
                   <Link href="/process" onClick={() => setIsOpen(false)} className="text-[19px] font-medium text-slate-900 dark:text-white tracking-tight py-2">Process</Link>
                   <Link href="/pricing" onClick={() => setIsOpen(false)} className="text-[19px] font-medium text-slate-900 dark:text-white tracking-tight py-2">Pricing</Link>
                   <div className="h-px bg-gray-100 dark:bg-gray-800 my-4 mx-auto w-12"></div>
-                  <a href="#" className="text-xl font-medium text-gray-500 hover:text-indigo-600">Login</a>
+                  <Link href="/login" onClick={() => setIsOpen(false)} className="text-xl font-medium text-gray-500 hover:text-indigo-600">Login</Link>
                 </nav>
                 <div className="mt-auto pt-10">
-                  <Link href="/process" onClick={() => setIsOpen(false)} className="block w-full bg-indigo-600 text-white text-center font-bold py-4 rounded-lg shadow-lg shadow-indigo-200 dark:shadow-none">
+                  {/* FIXED: Now points to /start-project */}
+                  <Link href="/start-project" onClick={() => setIsOpen(false)} className="block w-full bg-indigo-600 text-white text-center font-bold py-4 rounded-lg shadow-lg shadow-indigo-200 dark:shadow-none">
                     Start Project
                   </Link>
                 </div>
