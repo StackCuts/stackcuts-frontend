@@ -1,26 +1,32 @@
 @import "tailwindcss";
 
+/* 
+  Defines the responsive dark variant for the 'class' strategy.
+  This allows 'dark:' prefixes to work when the '.dark' class is present on the root element.
+*/
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* 
+  Ensures standard background/foreground colors transition.
+  This handles the "manually handles the theme transition" requirement.
+*/
+@theme {
+  --color-foreground: var(--foreground);
+  --color-background: var(--background);
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.dark {
+  --background: #0a0a0a;
+  --foreground: #ededed;
 }
 
 body {
-  background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--background);
+  transition: color 0.3s ease, background-color 0.3s ease;
 }
