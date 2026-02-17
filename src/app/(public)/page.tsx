@@ -4,8 +4,7 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { 
   Film, X, Play, Zap, Cloud, Mountain, 
-  Waves, UploadCloud, Video, CheckCircle, 
-  Globe, Mail, Star 
+  Waves, Globe, Mail, Star 
 } from "lucide-react";
 import { Navbar } from "@/components/Navbar";
 
@@ -189,7 +188,12 @@ const VideoModal = ({ project, onClose }: { project: Project; onClose: () => voi
           <h2 className="text-lg md:text-xl font-semibold text-slate-900 dark:text-white truncate pr-4">
             {project.title}
           </h2>
-          <button onClick={onClose} className="text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors p-1">
+          <button 
+            /* FIX: Added aria-label */
+            aria-label="Close modal"
+            onClick={onClose} 
+            className="text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors p-1"
+          >
             <X className="w-6 h-6" />
           </button>
         </div>
@@ -295,7 +299,7 @@ const CTA = () => {
             Get Started Now
           </a>
           <a
-            href="/#pricing"
+            href="/pricing"
             className="bg-white dark:bg-gray-900 hover:bg-gray-50 dark:hover:bg-gray-800 text-slate-700 dark:text-gray-200 font-bold py-4 px-10 rounded-lg border border-gray-200 dark:border-gray-700 transition-colors"
           >
             View Pricing
@@ -326,8 +330,22 @@ const Footer = () => {
             © 2026 StackCuts. All rights reserved.
           </p>
           <div className="flex gap-4">
-            <a href="#" className="text-gray-400 hover:text-indigo-600 transition-colors"><Globe className="w-5 h-5" /></a>
-            <a href="#" className="text-gray-400 hover:text-indigo-600 transition-colors"><Mail className="w-5 h-5" /></a>
+            <a 
+              /* FIX: Added aria-label */
+              aria-label="Website"
+              href="#" 
+              className="text-gray-400 hover:text-indigo-600 transition-colors"
+            >
+                <Globe className="w-5 h-5" />
+            </a>
+            <a 
+              /* FIX: Added aria-label */
+              aria-label="Email"
+              href="#" 
+              className="text-gray-400 hover:text-indigo-600 transition-colors"
+            >
+                <Mail className="w-5 h-5" />
+            </a>
           </div>
         </div>
       </div>
@@ -343,11 +361,13 @@ export default function LandingPage() {
       <Navbar />
       <Hero />
       <Logos />
+      {/* Pass the handler to open the modal */}
       <Portfolio onOpenProject={setActiveProject} />
       <Testimonials />
       <CTA />
       <Footer />
 
+      {/* Render the Modal if a project is active */}
       <AnimatePresence>
         {activeProject && (
           <VideoModal 

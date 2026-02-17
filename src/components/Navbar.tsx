@@ -25,7 +25,7 @@ export const Navbar = () => {
       <nav 
         className={`fixed w-full z-50 transition-all duration-300 ${
           scrolled || isOpen 
-            ? "bg-white/90 dark:bg-[#121121]/90 backdrop-blur-md border-b border-gray-100 dark:border-white/5" 
+            ? "bg-white/90 dark:bg-gray-950/90 backdrop-blur-md border-b border-gray-100 dark:border-white/5" 
             : "bg-transparent"
         }`}
       >
@@ -46,7 +46,6 @@ export const Navbar = () => {
               <Link href="/process" className="text-sm font-medium text-gray-500 hover:text-indigo-600 dark:text-gray-400 dark:hover:text-white transition-colors">
                 Process
               </Link>
-              {/* UPDATED LINK: Now points to the real page */}
               <Link href="/pricing" className="text-sm font-medium text-gray-500 hover:text-indigo-600 dark:text-gray-400 dark:hover:text-white transition-colors">
                 Pricing
               </Link>
@@ -56,6 +55,8 @@ export const Navbar = () => {
             <div className="hidden md:flex items-center space-x-4">
               {mounted && (
                 <button 
+                  /* FIX 1: Added aria-label */
+                  aria-label="Toggle Dark Mode"
                   onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
                   className="p-2 text-gray-500 hover:text-indigo-600 dark:text-gray-400 dark:hover:text-white transition-colors rounded-full hover:bg-gray-100 dark:hover:bg-gray-800"
                 >
@@ -78,13 +79,20 @@ export const Navbar = () => {
             <div className="md:hidden flex items-center gap-4">
               {mounted && (
                 <button 
+                  /* FIX 2: Added aria-label */
+                  aria-label="Toggle Dark Mode"
                   onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
                   className="p-2 text-gray-500 hover:text-slate-900 dark:text-gray-400 dark:hover:text-white"
                 >
                   {theme === 'dark' ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
                 </button>
               )}
-              <button onClick={() => setIsOpen(true)} className="p-2 -mr-2 text-slate-600 hover:text-slate-900 dark:text-gray-400 dark:hover:text-white">
+              <button 
+                /* FIX 3: Added aria-label */
+                aria-label="Open Menu"
+                onClick={() => setIsOpen(true)} 
+                className="p-2 -mr-2 text-slate-600 hover:text-slate-900 dark:text-gray-400 dark:hover:text-white"
+              >
                 <Menu className="w-6 h-6" />
               </button>
             </div>
@@ -108,14 +116,19 @@ export const Navbar = () => {
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ type: "spring", damping: 30, stiffness: 300 }}
-              className="fixed inset-y-0 right-0 z-[70] w-[85%] sm:w-[320px] bg-white dark:bg-[#121121] shadow-2xl flex flex-col"
+              className="fixed inset-y-0 right-0 z-[70] w-[85%] sm:w-[320px] bg-white dark:bg-gray-950 shadow-2xl flex flex-col"
             >
               <div className="h-16 px-6 flex items-center justify-between border-b border-gray-50 dark:border-white/5">
                 <div className="flex items-center gap-2">
                   <Film className="text-indigo-600 w-6 h-6" />
                   <span className="font-bold text-lg tracking-tight text-slate-900 dark:text-white">StackCuts</span>
                 </div>
-                <button onClick={() => setIsOpen(false)} className="p-2 -mr-2 text-slate-900 dark:text-white hover:opacity-70">
+                <button 
+                  /* FIX 4: Added aria-label */
+                  aria-label="Close Menu"
+                  onClick={() => setIsOpen(false)} 
+                  className="p-2 -mr-2 text-slate-900 dark:text-white hover:opacity-70"
+                >
                   <X className="w-6 h-6" />
                 </button>
               </div>
@@ -123,7 +136,6 @@ export const Navbar = () => {
                 <nav className="flex flex-col gap-6 text-center">
                   <Link href="/" onClick={() => setIsOpen(false)} className="text-[19px] font-medium text-slate-900 dark:text-white tracking-tight py-2">Work</Link>
                   <Link href="/process" onClick={() => setIsOpen(false)} className="text-[19px] font-medium text-slate-900 dark:text-white tracking-tight py-2">Process</Link>
-                  {/* UPDATED LINK HERE TOO */}
                   <Link href="/pricing" onClick={() => setIsOpen(false)} className="text-[19px] font-medium text-slate-900 dark:text-white tracking-tight py-2">Pricing</Link>
                   <div className="h-px bg-gray-100 dark:bg-gray-800 my-4 mx-auto w-12"></div>
                   <a href="#" className="text-xl font-medium text-gray-500 hover:text-indigo-600">Login</a>

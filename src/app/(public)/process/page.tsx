@@ -8,17 +8,16 @@ import {
   FileText, Play, Download
 } from "lucide-react";
 
-// --- Components ---
-
 const ProcessTimeline = () => {
   return (
-    <div id="process" className="bg-white dark:bg-[#121121] transition-colors duration-300">
+    /* FIXED: Changed to gray-950 to match Home */
+    <div id="process" className="bg-white dark:bg-gray-950 transition-colors duration-300">
       <section className="px-4 py-16 md:py-24 pt-32">
         <div className="mx-auto max-w-[960px] text-center">
-          <h1 className="text-[#121117] dark:text-white tracking-tight text-4xl md:text-5xl lg:text-6xl font-black leading-tight mb-6">
+          <h1 className="text-slate-900 dark:text-white tracking-tight text-4xl md:text-5xl lg:text-6xl font-black leading-tight mb-6">
             Your Journey with StackCuts
           </h1>
-          <p className="text-[#656487] text-lg md:text-xl font-normal leading-relaxed max-w-2xl mx-auto">
+          <p className="text-gray-500 dark:text-gray-400 text-lg md:text-xl font-normal leading-relaxed max-w-2xl mx-auto">
             From selection to final polish, we've streamlined the creative process into 5 simple steps.
           </p>
         </div>
@@ -33,15 +32,15 @@ const ProcessTimeline = () => {
           {/* Step 1 */}
           <div className="relative grid grid-cols-1 md:grid-cols-2 gap-8 mb-20 md:mb-32 group">
             <div className="absolute left-4 md:left-1/2 -ml-[9px] md:-ml-[9px] mt-6 flex items-center justify-center">
-              <div className="w-[18px] h-[18px] rounded-full bg-indigo-600 border-4 border-white dark:border-[#121121] shadow-lg z-10"></div>
+              <div className="w-[18px] h-[18px] rounded-full bg-indigo-600 border-4 border-white dark:border-gray-950 shadow-lg z-10"></div>
             </div>
             <div className="pl-12 md:pl-0 md:pr-16 md:text-right flex flex-col justify-center order-2 md:order-1">
               <span className="text-indigo-600 font-bold tracking-wider text-sm mb-2 block uppercase">Step 01</span>
-              <h3 className="text-2xl md:text-3xl font-bold text-[#121117] dark:text-white mb-3">Choose Your Pack</h3>
-              <p className="text-[#656487] text-base leading-relaxed">Select the package that fits your growth stage. Whether you need a single winning hook or a full-funnel creative refresh, we have transparent pricing models ready.</p>
+              <h3 className="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white mb-3">Choose Your Pack</h3>
+              <p className="text-gray-500 dark:text-gray-400 text-base leading-relaxed">Select the package that fits your growth stage. Whether you need a single winning hook or a full-funnel creative refresh, we have transparent pricing models ready.</p>
             </div>
             <div className="pl-12 md:pl-16 order-3 md:order-2">
-              <div className="relative bg-white dark:bg-[#1a1924] border border-gray-100 dark:border-white/5 rounded-xl shadow-xl overflow-hidden p-6 hover:-translate-y-1 transition-transform duration-300">
+              <div className="relative bg-white dark:bg-gray-900 border border-gray-100 dark:border-white/5 rounded-xl shadow-xl overflow-hidden p-6 hover:-translate-y-1 transition-transform duration-300">
                 <div className="flex flex-col gap-4">
                   <div className="flex justify-between items-center border-b border-gray-100 dark:border-white/5 pb-4">
                     <div className="flex items-center gap-3">
@@ -49,8 +48,8 @@ const ProcessTimeline = () => {
                         <Package className="w-6 h-6" />
                       </div>
                       <div>
-                        <div className="font-bold text-[#121117] dark:text-white">Starter Pack</div>
-                        <div className="text-xs text-[#656487]">Perfect for testing</div>
+                        <div className="font-bold text-slate-900 dark:text-white">Starter Pack</div>
+                        <div className="text-xs text-gray-500 dark:text-gray-400">Perfect for testing</div>
                       </div>
                     </div>
                     <div className="text-indigo-600 font-bold">$990</div>
@@ -60,7 +59,7 @@ const ProcessTimeline = () => {
                       <div className="w-6 h-6 rounded-full bg-indigo-600 text-white flex items-center justify-center">
                         <Check className="w-3 h-3" />
                       </div>
-                      <div className="font-bold text-sm text-[#121117] dark:text-white">Growth Pack</div>
+                      <div className="font-bold text-sm text-slate-900 dark:text-white">Growth Pack</div>
                     </div>
                     <div className="text-indigo-600 font-bold text-sm">$2,400</div>
                   </div>
@@ -70,8 +69,8 @@ const ProcessTimeline = () => {
                         <Rocket className="w-5 h-5" />
                       </div>
                       <div>
-                        <div className="font-bold text-[#121117] dark:text-white">Scale Pack</div>
-                        <div className="text-xs text-[#656487]">Full dominance</div>
+                        <div className="font-bold text-slate-900 dark:text-white">Scale Pack</div>
+                        <div className="text-xs text-gray-500 dark:text-gray-400">Full dominance</div>
                       </div>
                     </div>
                     <div className="text-gray-400 font-bold">$4,800</div>
@@ -84,19 +83,19 @@ const ProcessTimeline = () => {
           {/* Step 2 */}
           <div className="relative grid grid-cols-1 md:grid-cols-2 gap-8 mb-20 md:mb-32 group">
             <div className="absolute left-4 md:left-1/2 -ml-[9px] md:-ml-[9px] mt-6 flex items-center justify-center">
-              <div className="w-[18px] h-[18px] rounded-full bg-indigo-600 border-4 border-white dark:border-[#121121] shadow-lg z-10"></div>
+              <div className="w-[18px] h-[18px] rounded-full bg-indigo-600 border-4 border-white dark:border-gray-950 shadow-lg z-10"></div>
             </div>
             <div className="pl-12 md:pl-0 md:pr-16 order-3 md:order-1">
-              <div className="relative bg-white dark:bg-[#1a1924] border border-gray-100 dark:border-white/5 rounded-xl shadow-xl overflow-hidden p-8 hover:-translate-y-1 transition-transform duration-300 flex flex-col items-center justify-center text-center">
+              <div className="relative bg-white dark:bg-gray-900 border border-gray-100 dark:border-white/5 rounded-xl shadow-xl overflow-hidden p-8 hover:-translate-y-1 transition-transform duration-300 flex flex-col items-center justify-center text-center">
                 <div className="w-20 h-20 bg-indigo-50 dark:bg-indigo-600/10 rounded-full flex items-center justify-center mb-6 text-indigo-600 animate-pulse">
                   <CloudUpload className="w-10 h-10" />
                 </div>
-                <h4 className="text-lg font-bold text-[#121117] dark:text-white mb-2">Drag & Drop Assets</h4>
-                <p className="text-sm text-[#656487] mb-6">Supports .mp4, .mov, .png, .ai</p>
+                <h4 className="text-lg font-bold text-slate-900 dark:text-white mb-2">Drag & Drop Assets</h4>
+                <p className="text-sm text-gray-500 dark:text-gray-400 mb-6">Supports .mp4, .mov, .png, .ai</p>
                 <div className="w-full bg-gray-100 dark:bg-white/5 rounded-full h-2 mb-2 overflow-hidden">
                   <div className="bg-indigo-600 h-2 rounded-full w-2/3"></div>
                 </div>
-                <div className="flex justify-between w-full text-xs text-[#656487] font-medium">
+                <div className="flex justify-between w-full text-xs text-gray-500 dark:text-gray-400 font-medium">
                   <span>Uploading...</span>
                   <span>68%</span>
                 </div>
@@ -104,28 +103,28 @@ const ProcessTimeline = () => {
             </div>
             <div className="pl-12 md:pl-16 flex flex-col justify-center order-2 md:order-2">
               <span className="text-indigo-600 font-bold tracking-wider text-sm mb-2 block uppercase">Step 02</span>
-              <h3 className="text-2xl md:text-3xl font-bold text-[#121117] dark:text-white mb-3">Upload & Brief</h3>
-              <p className="text-[#656487] text-base leading-relaxed">Seamlessly upload your raw footage, logos, and fonts. Fill out our structured brief to tell us about your target audience, value props, and winning angles.</p>
+              <h3 className="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white mb-3">Upload & Brief</h3>
+              <p className="text-gray-500 dark:text-gray-400 text-base leading-relaxed">Seamlessly upload your raw footage, logos, and fonts. Fill out our structured brief to tell us about your target audience, value props, and winning angles.</p>
             </div>
           </div>
 
           {/* Step 3 */}
           <div className="relative grid grid-cols-1 md:grid-cols-2 gap-8 mb-20 md:mb-32 group">
             <div className="absolute left-4 md:left-1/2 -ml-[9px] md:-ml-[9px] mt-6 flex items-center justify-center">
-              <div className="w-[18px] h-[18px] rounded-full bg-indigo-600 border-4 border-white dark:border-[#121121] shadow-lg z-10"></div>
+              <div className="w-[18px] h-[18px] rounded-full bg-indigo-600 border-4 border-white dark:border-gray-950 shadow-lg z-10"></div>
             </div>
             <div className="pl-12 md:pl-0 md:pr-16 md:text-right flex flex-col justify-center order-2 md:order-1">
               <span className="text-indigo-600 font-bold tracking-wider text-sm mb-2 block uppercase">Step 03</span>
-              <h3 className="text-2xl md:text-3xl font-bold text-[#121117] dark:text-white mb-3">Align on Vision</h3>
-              <p className="text-[#656487] text-base leading-relaxed">Review the script and storyboard before we start editing. Comment directly on the document, suggest changes, and hit approve when you're ready to roll.</p>
+              <h3 className="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white mb-3">Align on Vision</h3>
+              <p className="text-gray-500 dark:text-gray-400 text-base leading-relaxed">Review the script and storyboard before we start editing. Comment directly on the document, suggest changes, and hit approve when you're ready to roll.</p>
             </div>
             <div className="pl-12 md:pl-16 order-3 md:order-2">
-              <div className="relative bg-white dark:bg-[#1a1924] border border-gray-100 dark:border-white/5 rounded-xl shadow-xl overflow-hidden hover:-translate-y-1 transition-transform duration-300">
+              <div className="relative bg-white dark:bg-gray-900 border border-gray-100 dark:border-white/5 rounded-xl shadow-xl overflow-hidden hover:-translate-y-1 transition-transform duration-300">
                 <div className="bg-gray-50 dark:bg-white/5 border-b border-gray-100 dark:border-white/5 px-4 py-2 flex items-center gap-2">
                   <div className="w-3 h-3 rounded-full bg-red-400"></div>
                   <div className="w-3 h-3 rounded-full bg-yellow-400"></div>
                   <div className="w-3 h-3 rounded-full bg-green-400"></div>
-                  <div className="ml-2 text-xs font-mono text-[#656487]">script_v3_final.doc</div>
+                  <div className="ml-2 text-xs font-mono text-gray-500 dark:text-gray-400">script_v3_final.doc</div>
                 </div>
                 <div className="p-6 space-y-4">
                   <div className="flex gap-4">
@@ -155,7 +154,7 @@ const ProcessTimeline = () => {
           {/* Step 4 */}
           <div className="relative grid grid-cols-1 md:grid-cols-2 gap-8 mb-20 md:mb-32 group">
             <div className="absolute left-4 md:left-1/2 -ml-[9px] md:-ml-[9px] mt-6 flex items-center justify-center">
-              <div className="w-[18px] h-[18px] rounded-full bg-indigo-600 border-4 border-white dark:border-[#121121] shadow-lg z-10"></div>
+              <div className="w-[18px] h-[18px] rounded-full bg-indigo-600 border-4 border-white dark:border-gray-950 shadow-lg z-10"></div>
             </div>
             <div className="pl-12 md:pl-0 md:pr-16 order-3 md:order-1">
               <div className="relative bg-[#1e1e2e] rounded-xl shadow-xl overflow-hidden hover:-translate-y-1 transition-transform duration-300 p-1">
@@ -188,23 +187,23 @@ const ProcessTimeline = () => {
             </div>
             <div className="pl-12 md:pl-16 flex flex-col justify-center order-2 md:order-2">
               <span className="text-indigo-600 font-bold tracking-wider text-sm mb-2 block uppercase">Step 04</span>
-              <h3 className="text-2xl md:text-3xl font-bold text-[#121117] dark:text-white mb-3">We Build Your Hybrid Ads</h3>
-              <p className="text-[#656487] text-base leading-relaxed">Our editors get to work. We combine stock footage, motion graphics, and your raw assets to create high-performing hybrid ads designed to stop the scroll.</p>
+              <h3 className="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white mb-3">We Build Your Hybrid Ads</h3>
+              <p className="text-gray-500 dark:text-gray-400 text-base leading-relaxed">Our editors get to work. We combine stock footage, motion graphics, and your raw assets to create high-performing hybrid ads designed to stop the scroll.</p>
             </div>
           </div>
 
           {/* Step 5 */}
           <div className="relative grid grid-cols-1 md:grid-cols-2 gap-8 group">
             <div className="absolute left-4 md:left-1/2 -ml-[9px] md:-ml-[9px] mt-6 flex items-center justify-center">
-              <div className="w-[18px] h-[18px] rounded-full bg-indigo-600 border-4 border-white dark:border-[#121121] shadow-lg z-10"></div>
+              <div className="w-[18px] h-[18px] rounded-full bg-indigo-600 border-4 border-white dark:border-gray-950 shadow-lg z-10"></div>
             </div>
             <div className="pl-12 md:pl-0 md:pr-16 md:text-right flex flex-col justify-center order-2 md:order-1">
               <span className="text-indigo-600 font-bold tracking-wider text-sm mb-2 block uppercase">Step 05</span>
-              <h3 className="text-2xl md:text-3xl font-bold text-[#121117] dark:text-white mb-3">Review, Polish, Download</h3>
-              <p className="text-[#656487] text-base leading-relaxed">Access your private review link. Leave frame-accurate feedback if needed. Once perfect, download your assets in all formats ready for ad platform upload.</p>
+              <h3 className="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white mb-3">Review, Polish, Download</h3>
+              <p className="text-gray-500 dark:text-gray-400 text-base leading-relaxed">Access your private review link. Leave frame-accurate feedback if needed. Once perfect, download your assets in all formats ready for ad platform upload.</p>
             </div>
             <div className="pl-12 md:pl-16 order-3 md:order-2">
-              <div className="relative bg-white dark:bg-[#1a1924] border border-gray-100 dark:border-white/5 rounded-xl shadow-xl overflow-hidden hover:-translate-y-1 transition-transform duration-300">
+              <div className="relative bg-white dark:bg-gray-900 border border-gray-100 dark:border-white/5 rounded-xl shadow-xl overflow-hidden hover:-translate-y-1 transition-transform duration-300">
                 <div className="aspect-video bg-gray-900 relative group/video">
                   <div className="w-full h-full bg-gray-800 opacity-80 flex items-center justify-center">
                      <span className="text-white text-xs opacity-50">Video Preview</span>
@@ -223,7 +222,7 @@ const ProcessTimeline = () => {
                     </div>
                   </div>
                 </div>
-                <div className="p-4 bg-white dark:bg-[#1a1924]">
+                <div className="p-4 bg-white dark:bg-gray-900">
                   <button className="w-full flex items-center justify-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-4 rounded-lg shadow-lg transition-all active:scale-95">
                     <Download className="w-5 h-5" />
                     Download Final Assets
@@ -236,7 +235,7 @@ const ProcessTimeline = () => {
       </section>
 
       <section className="py-20 px-4 md:px-10">
-        <div className="max-w-[1024px] mx-auto bg-gradient-to-br from-[#121121] to-[#2a2a3c] rounded-2xl overflow-hidden relative shadow-2xl">
+        <div className="max-w-[1024px] mx-auto bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl overflow-hidden relative shadow-2xl">
           <div className="absolute -top-24 -left-24 w-64 h-64 bg-indigo-600/20 rounded-full blur-3xl"></div>
           <div className="absolute -bottom-24 -right-24 w-64 h-64 bg-indigo-500/20 rounded-full blur-3xl"></div>
           <div className="relative z-10 flex flex-col md:flex-row items-center justify-between p-10 md:p-16 gap-10">
@@ -258,7 +257,8 @@ const ProcessTimeline = () => {
 
 const Footer = () => {
   return (
-    <footer className="bg-white dark:bg-[#121121] border-t border-gray-100 dark:border-white/5 pt-12 pb-8 px-5">
+    /* FIXED: Changed to gray-950 */
+    <footer className="bg-white dark:bg-gray-950 border-t border-gray-100 dark:border-white/5 pt-12 pb-8 px-5">
       <div className="max-w-7xl mx-auto flex flex-col items-center text-center">
         <div className="flex items-center gap-2 mb-8">
           <Film className="text-indigo-600 w-6 h-6" />
@@ -276,8 +276,8 @@ const Footer = () => {
             © 2026 StackCuts. All rights reserved.
           </p>
           <div className="flex gap-4">
-            <a href="#" className="text-gray-400 hover:text-indigo-600 transition-colors"><Globe className="w-5 h-5" /></a>
-            <a href="#" className="text-gray-400 hover:text-indigo-600 transition-colors"><Mail className="w-5 h-5" /></a>
+            <a href="#" aria-label="Visit our website" className="text-gray-400 hover:text-indigo-600 transition-colors"><Globe className="w-5 h-5" /></a>
+            <a href="#" aria-label="Contact us" className="text-gray-400 hover:text-indigo-600 transition-colors"><Mail className="w-5 h-5" /></a>
           </div>
         </div>
       </div>
@@ -287,7 +287,7 @@ const Footer = () => {
 
 export default function ProcessPage() {
   return (
-    <main className="min-h-screen bg-white dark:bg-[#121121]">
+    <main className="min-h-screen bg-white dark:bg-gray-950">
       <Navbar />
       <ProcessTimeline />
       <Footer />
