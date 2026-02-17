@@ -18,7 +18,7 @@ const ProcessTimeline = () => {
             Your Journey with StackCuts
           </h1>
           <p className="text-gray-500 dark:text-gray-400 text-lg md:text-xl font-normal leading-relaxed max-w-2xl mx-auto">
-            From selection to final polish, we've streamlined the creative process into 5 simple steps.
+            From selection to final polish, we&apos;ve streamlined the creative process into 5 simple steps.
           </p>
         </div>
       </section>
@@ -116,7 +116,7 @@ const ProcessTimeline = () => {
             <div className="pl-12 md:pl-0 md:pr-16 md:text-right flex flex-col justify-center order-2 md:order-1">
               <span className="text-indigo-600 font-bold tracking-wider text-sm mb-2 block uppercase">Step 03</span>
               <h3 className="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white mb-3">Align on Vision</h3>
-              <p className="text-gray-500 dark:text-gray-400 text-base leading-relaxed">Review the script and storyboard before we start editing. Comment directly on the document, suggest changes, and hit approve when you're ready to roll.</p>
+              <p className="text-gray-500 dark:text-gray-400 text-base leading-relaxed">Review the script and storyboard before we start editing. Comment directly on the document, suggest changes, and hit approve when you&apos;re ready to roll.</p>
             </div>
             <div className="pl-12 md:pl-16 order-3 md:order-2">
               <div className="relative bg-white dark:bg-gray-900 border border-gray-100 dark:border-white/5 rounded-xl shadow-xl overflow-hidden hover:-translate-y-1 transition-transform duration-300">

@@ -6,19 +6,18 @@ import {
   ArrowRight, Sparkles 
 } from "lucide-react";
 import { motion } from "framer-motion";
+import Link from "next/link"; // Required for navigation
 
 export default function StartProjectPage() {
-  // --- State for Dynamic Pricing ---
   const [selectedPackage, setSelectedPackage] = useState<'single' | 'growth'>('single');
   const [selectedFormat, setSelectedFormat] = useState<'landscape' | 'vertical'>('landscape');
   const [isAiWriterEnabled, setIsAiWriterEnabled] = useState(false);
   
-  // Pricing Logic
   const total = selectedPackage === 'single' ? 1000 : 3000;
   const deposit = total * 0.5;
 
-  // Prevent Hydration Mismatch
   const [mounted, setMounted] = useState(false);
+  // eslint-disable-next-line react-hooks/set-state-in-effect
   useEffect(() => setMounted(true), []);
 
   if (!mounted) return null;
@@ -26,11 +25,8 @@ export default function StartProjectPage() {
   return (
     <div className="min-h-screen flex flex-col bg-white dark:bg-gray-950 text-slate-900 dark:text-white transition-colors duration-300">
       
-      {/* Main Content Area */}
-      {/* FIX: Increased pb-40 to pb-48 to stop the card from being hidden behind the footer */}
       <main className="flex-grow container mx-auto max-w-2xl px-6 pt-16 pb-48">
         
-        {/* FIX: Added text-center lg:text-left */}
         <header className="mb-10 text-center lg:text-left">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900 dark:text-white mb-2">
             Start New Project
@@ -42,9 +38,7 @@ export default function StartProjectPage() {
 
         <form className="space-y-10" onSubmit={(e) => e.preventDefault()}>
           
-          {/* Project Name */}
           <section>
-            {/* FIX: Added text-center lg:text-left */}
             <label className="block text-sm font-semibold text-slate-700 dark:text-gray-300 mb-2 text-center lg:text-left" htmlFor="project-name">
               Give your project a name
             </label>
@@ -56,13 +50,9 @@ export default function StartProjectPage() {
             />
           </section>
 
-          {/* Package Selection */}
           <section>
-            {/* FIX: Added text-center lg:text-left */}
             <h2 className="text-sm font-semibold text-slate-700 dark:text-gray-300 mb-4 text-center lg:text-left">Select Package</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              
-              {/* Option 1: Single Ad */}
               <div 
                 onClick={() => setSelectedPackage('single')}
                 className={`cursor-pointer group relative h-full p-6 border-2 rounded-xl transition-all ${
@@ -81,7 +71,6 @@ export default function StartProjectPage() {
                     <div className="w-6 h-6 rounded-full border-2 border-gray-300 dark:border-gray-600" />
                   )}
                 </div>
-                {/* FIX: Wrapped text in a div to handle centering on mobile */}
                 <div className="text-center lg:text-left">
                   <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-1">The Single Ad</h3>
                   <p className="text-sm text-slate-500 dark:text-gray-400 mb-6">(One-time)</p>
@@ -89,7 +78,6 @@ export default function StartProjectPage() {
                 </div>
               </div>
 
-              {/* Option 2: Growth Pack */}
               <div 
                 onClick={() => setSelectedPackage('growth')}
                 className={`cursor-pointer group relative h-full p-6 border-2 rounded-xl transition-all ${
@@ -108,20 +96,16 @@ export default function StartProjectPage() {
                     <div className="w-6 h-6 rounded-full border-2 border-gray-300 dark:border-gray-600" />
                   )}
                 </div>
-                {/* FIX: Wrapped text in a div to handle centering on mobile */}
                 <div className="text-center lg:text-left">
                   <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-1">The Growth Pack</h3>
                   <p className="text-sm text-slate-500 dark:text-gray-400 mb-6">(4 Videos)</p>
                   <p className="text-2xl font-bold text-slate-900 dark:text-white">$3,000</p>
                 </div>
               </div>
-
             </div>
           </section>
 
-          {/* Goal Select */}
           <section>
-            {/* FIX: Added text-center lg:text-left */}
             <label className="block text-sm font-semibold text-slate-700 dark:text-gray-300 mb-2 text-center lg:text-left" htmlFor="goal">
               What is the goal?
             </label>
@@ -141,12 +125,9 @@ export default function StartProjectPage() {
             </div>
           </section>
 
-          {/* Format Selection */}
           <section>
-            {/* FIX: Added text-center lg:text-left */}
             <h2 className="text-sm font-semibold text-slate-700 dark:text-gray-300 mb-3 text-center lg:text-left">Format</h2>
             <div className="flex flex-wrap gap-4">
-              
               <div 
                 onClick={() => setSelectedFormat('landscape')}
                 className={`flex-1 min-w-[160px] cursor-pointer flex items-center justify-center lg:justify-start gap-3 p-4 border rounded-lg transition-all ${
@@ -170,11 +151,9 @@ export default function StartProjectPage() {
                 <Smartphone className={`w-5 h-5 ${selectedFormat === 'vertical' ? 'text-indigo-600' : 'text-gray-400'}`} />
                 <span className="text-sm font-medium dark:text-white">9:16 Vertical</span>
               </div>
-
             </div>
           </section>
 
-          {/* AI Writer Toggle */}
           <section className="pt-4">
             <div 
               onClick={() => setIsAiWriterEnabled(!isAiWriterEnabled)}
@@ -188,7 +167,6 @@ export default function StartProjectPage() {
                 <span className="text-xs text-slate-500 dark:text-gray-400">Our AI copywriters will handle the script.</span>
               </div>
               
-              {/* React Toggle Switch */}
               <div className={`relative w-11 h-6 rounded-full transition-colors duration-200 ${isAiWriterEnabled ? 'bg-indigo-600' : 'bg-gray-200 dark:bg-gray-700'}`}>
                 <div className={`absolute top-1 left-1 bg-white w-4 h-4 rounded-full transition-transform duration-200 ${isAiWriterEnabled ? 'translate-x-5' : 'translate-x-0'}`} />
               </div>
@@ -198,7 +176,6 @@ export default function StartProjectPage() {
         </form>
       </main>
 
-      {/* Sticky Footer */}
       <footer className="fixed bottom-0 w-full bg-white/90 dark:bg-gray-950/90 backdrop-blur-md border-t border-gray-200 dark:border-gray-800 px-6 py-6 z-50">
         <div className="container mx-auto max-w-4xl flex flex-col sm:flex-row items-center justify-between gap-6">
           <div className="flex items-center gap-8 w-full sm:w-auto justify-center sm:justify-start">
@@ -209,7 +186,6 @@ export default function StartProjectPage() {
             <div className="h-10 w-px bg-gray-200 dark:bg-gray-800 hidden sm:block"></div>
             <div>
               <p className="text-[10px] uppercase font-bold tracking-widest text-gray-400 dark:text-gray-500 mb-1">Due Now (50% Deposit)</p>
-              {/* Dynamic Price Update */}
               <motion.p 
                 key={deposit} 
                 initial={{ opacity: 0, y: 5 }} 
@@ -220,10 +196,15 @@ export default function StartProjectPage() {
               </motion.p>
             </div>
           </div>
-          <button className="w-full sm:w-auto px-8 py-4 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-lg transition-all shadow-lg shadow-indigo-600/20 active:scale-95 flex items-center justify-center gap-2">
+          
+          {/* LINK TO CHECKOUT - This ensures the button works */}
+          <Link 
+            href="/checkout"
+            className="w-full sm:w-auto px-8 py-4 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-lg transition-all shadow-lg shadow-indigo-600/20 active:scale-95 flex items-center justify-center gap-2"
+          >
             Save & Proceed
             <ArrowRight className="w-4 h-4" />
-          </button>
+          </Link>
         </div>
       </footer>
 

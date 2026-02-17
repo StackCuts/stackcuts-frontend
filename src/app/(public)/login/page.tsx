@@ -14,6 +14,7 @@ export default function LoginPage() {
   const [mounted, setMounted] = useState(false);
 
   // Prevent hydration mismatch
+  // eslint-disable-next-line react-hooks/set-state-in-effect
   useEffect(() => setMounted(true), []);
 
   return (

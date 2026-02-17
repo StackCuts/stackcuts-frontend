@@ -251,7 +251,7 @@ const Testimonials = () => {
                         <div className="flex gap-1 text-[#F59E0B] mb-4">
                             {[1,2,3,4,5].map(s => <Star key={s} className="w-4 h-4 fill-current" />)}
                         </div>
-                        <p className="text-slate-600 dark:text-gray-300 italic text-sm leading-relaxed mb-6">"StackCuts transformed our ad strategy. The videos are top-notch and delivered incredibly fast, without a single meeting!"</p>
+                        <p className="text-slate-600 dark:text-gray-300 italic text-sm leading-relaxed mb-6">&quot;StackCuts transformed our ad strategy. The videos are top-notch and delivered incredibly fast, without a single meeting!&quot;</p>
                         <div className="flex items-center gap-3">
                             <div className="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center">
                                 <span className="font-bold text-gray-400">SC</span>
@@ -266,7 +266,7 @@ const Testimonials = () => {
                         <div className="flex gap-1 text-[#F59E0B] mb-4">
                             {[1,2,3,4,5].map(s => <Star key={s} className="w-4 h-4 fill-current" />)}
                         </div>
-                        <p className="text-slate-600 dark:text-gray-300 italic text-sm leading-relaxed mb-6">"The quality and speed of StackCuts' service are unmatched. Our conversion rates have seen a significant boost."</p>
+                        <p className="text-slate-600 dark:text-gray-300 italic text-sm leading-relaxed mb-6">&quot;The quality and speed of StackCuts&apos; service are unmatched. Our conversion rates have seen a significant boost.&quot;</p>
                         <div className="flex items-center gap-3">
                             <div className="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center">
                                 <span className="font-bold text-gray-400">DL</span>

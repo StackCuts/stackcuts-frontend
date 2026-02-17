@@ -17,7 +17,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${inter.className} antialiased`}>
+      <body 
+        /* FIX: Added suppressHydrationWarning here to stop Grammarly/Extension errors */
+        className={`${inter.className} bg-white dark:bg-gray-950 text-slate-900 dark:text-white antialiased transition-colors duration-300`}
+        suppressHydrationWarning={true}
+      >
         <Providers>{children}</Providers>
       </body>
     </html>
