@@ -12,7 +12,6 @@ export const Navbar = () => {
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
-  // eslint-disable-next-line react-hooks/set-state-in-effect
   useEffect(() => setMounted(true), []);
 
   useEffect(() => {
@@ -50,6 +49,10 @@ export const Navbar = () => {
               <Link href="/pricing" className="text-sm font-medium text-gray-500 hover:text-indigo-600 dark:text-gray-400 dark:hover:text-white transition-colors">
                 Pricing
               </Link>
+              {/* NEW LINK ADDED HERE */}
+              <Link href="/ai-storyboard" className="text-sm font-medium text-gray-500 hover:text-indigo-600 dark:text-gray-400 dark:hover:text-white transition-colors">
+                AI Storyboard
+              </Link>
             </div>
 
             {/* Desktop Actions */}
@@ -69,7 +72,6 @@ export const Navbar = () => {
                 Login
               </Link>
               
-              {/* FIXED: Now points to /start-project instead of /process */}
               <Link
                 href="/start-project"
                 className="bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-medium py-2 px-5 rounded-lg shadow-sm transition-all"
@@ -137,11 +139,13 @@ export const Navbar = () => {
                   <Link href="/" onClick={() => setIsOpen(false)} className="text-[19px] font-medium text-slate-900 dark:text-white tracking-tight py-2">Work</Link>
                   <Link href="/process" onClick={() => setIsOpen(false)} className="text-[19px] font-medium text-slate-900 dark:text-white tracking-tight py-2">Process</Link>
                   <Link href="/pricing" onClick={() => setIsOpen(false)} className="text-[19px] font-medium text-slate-900 dark:text-white tracking-tight py-2">Pricing</Link>
+                  {/* NEW LINK ADDED HERE */}
+                  <Link href="/ai-storyboard" onClick={() => setIsOpen(false)} className="text-[19px] font-medium text-slate-900 dark:text-white tracking-tight py-2">AI Storyboard</Link>
+                  
                   <div className="h-px bg-gray-100 dark:bg-gray-800 my-4 mx-auto w-12"></div>
                   <Link href="/login" onClick={() => setIsOpen(false)} className="text-xl font-medium text-gray-500 hover:text-indigo-600">Login</Link>
                 </nav>
                 <div className="mt-auto pt-10">
-                  {/* FIXED: Now points to /start-project */}
                   <Link href="/start-project" onClick={() => setIsOpen(false)} className="block w-full bg-indigo-600 text-white text-center font-bold py-4 rounded-lg shadow-lg shadow-indigo-200 dark:shadow-none">
                     Start Project
                   </Link>
