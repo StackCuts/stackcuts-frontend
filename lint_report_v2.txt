@@ -1,0 +1,23 @@
+﻿
+C:\StackCuts\src\app\(client)\project\page.tsx
+    9:1   warning  'RotateCw' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  @typescript-eslint/no-unused-vars
+    9:11  warning  'Lock' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      @typescript-eslint/no-unused-vars
+  422:17  error    Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+C:\StackCuts\src\app\(client)\project\page.tsx:422:17
+  420 | const [selectedFormat, setSelectedFormat] = useState("vertical");
+  421 |
+> 422 | useEffect(() => setMounted(true), []);
+      |                 ^^^^^^^^^^ Avoid calling setState() directly within an effect
+  423 |
+  424 | const steps = ["Briefing", "Production", "Review", "Final"];
+  425 |  react-hooks/set-state-in-effect
+
+Γ£û 3 problems (1 error, 2 warnings)
+
