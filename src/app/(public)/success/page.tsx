@@ -83,10 +83,10 @@ export default function SuccessPage() {
 
         {/* Buttons */}
         <div className="space-y-4">
-          <button className="w-full bg-indigo-600 hover:bg-indigo-700 text-white py-4 px-6 rounded-lg font-semibold text-base transition-all shadow-lg shadow-indigo-600/20 active:scale-[0.98]">
+          <Link href="/project" className="block w-full bg-indigo-600 hover:bg-indigo-700 text-white py-4 px-6 rounded-lg font-semibold text-base transition-all shadow-lg shadow-indigo-600/20 active:scale-[0.98] text-center no-underline">
             Complete Your Project Brief
-          </button>
-          <Link href="/" className="block w-full text-gray-500 hover:text-slate-900 dark:text-gray-400 dark:hover:text-white text-sm font-medium transition-colors">
+          </Link>
+          <Link href="/dashboard" className="block w-full text-gray-500 hover:text-slate-900 dark:text-gray-400 dark:hover:text-white text-sm font-medium transition-colors">
             Go to Dashboard
           </Link>
         </div>

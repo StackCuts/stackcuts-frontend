@@ -2,10 +2,10 @@
 import React, { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
 import {
-Clapperboard, Bell, UploadCloud, Image as ImageIcon, Video,
+Bell, UploadCloud, Image as ImageIcon, Video,
 CheckCircle2, Sparkles, ArrowRight, Play, Settings, Maximize,
 ZoomIn, RotateCcw, Filter, AtSign, Check, Clock, Rocket,
-Eye, Zap, Search, Copy, Star, Sun, Moon, Download
+Eye, Zap, Search, Copy, Star, Sun, Moon, Download, Layers
 } from "lucide-react";
 import Link from "next/link";
 
@@ -18,21 +18,21 @@ const Header = ({ activeStep, setActiveStep, steps }: { activeStep: number, setA
     <div className="max-w-[1440px] mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
       
       {/* Left: Logo & Project Context */}
-      <div className="flex items-center gap-4">
-        <Link href="/dashboard" className="flex items-center gap-2">
-          <div className="bg-indigo-600 p-1.5 rounded-lg text-white">
-            <Clapperboard className="w-5 h-5" />
+        <div className="flex items-center gap-4">
+          <Link href="/dashboard" className="flex items-center gap-2">
+            <div className="bg-indigo-600 w-8 h-8 rounded-lg flex items-center justify-center shadow-sm">
+              <Layers className="text-white w-5 h-5" />
+            </div>
+            <span className="font-bold text-xl tracking-tight text-slate-900 dark:text-white hidden sm:block">StackCuts</span>
+          </Link>
+          <div className="h-4 w-px bg-gray-200 dark:bg-gray-700 hidden md:block"></div>
+          <div className="flex items-center gap-3">
+            <span className="text-sm font-semibold text-gray-600 dark:text-gray-300 truncate max-w-[150px] md:max-w-none">Summer SaaS Campaign</span>
+            {activeStep === 4 && (
+              <span className="px-2 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-400 border border-emerald-200 dark:border-emerald-800 hidden lg:block">Completed</span>
+            )}
           </div>
-          <span className="font-black text-xl tracking-tight text-slate-900 dark:text-white hidden sm:block">StackCuts</span>
-        </Link>
-        <div className="h-4 w-px bg-gray-200 dark:bg-gray-700 hidden md:block"></div>
-        <div className="flex items-center gap-3">
-          <span className="text-sm font-semibold text-gray-600 dark:text-gray-300 truncate max-w-[150px] md:max-w-none">Summer SaaS Campaign</span>
-          {activeStep === 4 && (
-            <span className="px-2 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-400 border border-emerald-200 dark:border-emerald-800 hidden lg:block">Completed</span>
-          )}
         </div>
-      </div>
 
       {/* Interactive Stepper */}
       <nav className="hidden lg:flex items-center gap-4 flex-1 justify-center max-w-lg mx-8">

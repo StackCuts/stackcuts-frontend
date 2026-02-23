@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { Navbar } from "@/components/Navbar";
-import { Play, X, ArrowRight } from "lucide-react";
+import { Play, X } from "lucide-react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -47,7 +47,7 @@ return (
           <Link href="/start-project" className="w-full sm:w-auto px-8 py-4 bg-indigo-600 text-white font-bold rounded-lg shadow-lg hover:shadow-indigo-500/20 hover:bg-indigo-700 transition-all">
             Start Project
           </Link>
-          <Link href="/ai-storyboard" className="w-full sm:w-auto px-8 py-4 bg-white dark:bg-gray-900 text-slate-900 dark:text-white font-semibold rounded-lg border border-gray-200 dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-gray-800 transition-all">
+          <Link href="/storyboard" className="w-full sm:w-auto px-8 py-4 bg-white dark:bg-gray-900 text-slate-900 dark:text-white font-semibold rounded-lg border border-gray-200 dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-gray-800 transition-all">
             ✨ Try the AI Storyboard
           </Link>
         </div>

@@ -191,7 +191,7 @@ export default function AiStoryboardPage() {
                       </div>
                       <div className="h-px w-full bg-gray-100 dark:bg-gray-800"></div>
                       <p className="text-sm leading-relaxed text-gray-600 dark:text-gray-300">
-                        Creator looking at camera: "If you struggle with manual data entry, stop scrolling right now..."
+                        Creator looking at camera: &quot;If you struggle with manual data entry, stop scrolling right now...&quot;
                       </p>
                     </div>
                     {/* Card 2 */}
@@ -230,7 +230,7 @@ export default function AiStoryboardPage() {
                       </div>
                       <div className="h-px w-full bg-gray-100 dark:bg-gray-800"></div>
                       <p className="text-sm leading-relaxed text-gray-600 dark:text-gray-300">
-                        Bold text animations on screen: "Automate your workflow. Click the link to start your free trial."
+                        Bold text animations on screen: &quot;Automate your workflow. Click the link to start your free trial.&quot;
                       </p>
                     </div>
                   </div>
@@ -371,7 +371,7 @@ export default function AiStoryboardPage() {
                 <section>
                   <h3 className="text-gray-900 dark:text-white font-semibold text-lg mb-4">Example Prompt</h3>
                   <div className="bg-gray-50 dark:bg-gray-800/50 border border-gray-100 dark:border-gray-800 rounded-xl p-5 italic text-gray-600 dark:text-gray-400 leading-relaxed text-sm">
-                    "I sell a B2B SaaS tool for agency owners. They waste hours on client reporting. My tool automates reports in 1-click. The offer is a 14-day free trial."
+                    &quot;I sell a B2B SaaS tool for agency owners. They waste hours on client reporting. My tool automates reports in 1-click. The offer is a 14-day free trial.&quot;
                   </div>
                 </section>
               </div>
