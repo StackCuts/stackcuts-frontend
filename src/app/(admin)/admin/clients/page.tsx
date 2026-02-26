@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/set-state-in-effect */
 "use client";
 import React, { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
@@ -5,10 +6,12 @@ import {
   LayoutDashboard, Users, Briefcase, Wallet, Settings,
   Moon, Sun, Menu, Search, ChevronDown, Plus, MoreHorizontal, Star
 } from "lucide-react";
+import { useRouter } from "next/navigation";
 import Link from "next/link";
 
 export default function AdminClientsPage() {
   const { theme, setTheme } = useTheme();
+  const router = useRouter();
   const [mounted, setMounted] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -71,15 +74,15 @@ export default function AdminClientsPage() {
             <Users className="w-5 h-5" />
             <p className="text-sm font-bold">Clients</p>
           </Link>
-          <Link href="#" className="flex items-center gap-3 px-3 py-2.5 rounded-xl text-slate-400 hover:bg-slate-800 hover:text-white transition-colors">
+          <Link href="/admin/projects" className="flex items-center gap-3 px-3 py-2.5 rounded-xl text-slate-400 hover:bg-slate-800 hover:text-white transition-colors">
             <Briefcase className="w-5 h-5" />
             <p className="text-sm font-medium">Projects</p>
           </Link>
-          <Link href="#" className="flex items-center gap-3 px-3 py-2.5 rounded-xl text-slate-400 hover:bg-slate-800 hover:text-white transition-colors">
+          <Link href="/admin/revenue" className="flex items-center gap-3 px-3 py-2.5 rounded-xl text-slate-400 hover:bg-slate-800 hover:text-white transition-colors">
             <Wallet className="w-5 h-5" />
             <p className="text-sm font-medium">Revenue</p>
           </Link>
-          <Link href="#" className="flex items-center gap-3 px-3 py-2.5 rounded-xl text-slate-400 hover:bg-slate-800 hover:text-white transition-colors mt-8">
+          <Link href="/admin/settings" className="flex items-center gap-3 px-3 py-2.5 rounded-xl text-slate-400 hover:bg-slate-800 hover:text-white transition-colors mt-8">
             <Settings className="w-5 h-5" />
             <p className="text-sm font-medium">Settings</p>
           </Link>
@@ -181,7 +184,11 @@ export default function AdminClientsPage() {
                 </thead>
                 <tbody className="bg-white dark:bg-gray-900 divide-y divide-gray-100 dark:divide-gray-800">
                   {clients.map((client, idx) => (
-                    <tr key={idx} className="hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors group">
+                    <tr 
+                      key={idx} 
+                      className="hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors group cursor-pointer"
+                      onClick={() => router.push('/admin/clients/1')}
+                    >
                       <td className="px-6 py-4 whitespace-nowrap">
                         <div className="flex items-center">
                           <div className="flex-shrink-0 h-10 w-10">

@@ -124,7 +124,7 @@ return (
         <Wallet className="w-5 h-5" />
         <p className="text-sm font-bold">Revenue</p>
       </Link>
-      <Link href="#" className="flex items-center gap-3 px-3 py-2.5 rounded-xl text-slate-400 hover:bg-slate-800 hover:text-white transition-colors mt-8">
+      <Link href="/admin/settings" className="flex items-center gap-3 px-3 py-2.5 rounded-xl text-slate-400 hover:bg-slate-800 hover:text-white transition-colors mt-8">
         <Settings className="w-5 h-5" />
         <p className="text-sm font-medium">Settings</p>
       </Link>

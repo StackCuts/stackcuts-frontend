@@ -28,19 +28,19 @@ export default function AdminCommandCenter() {
             <LayoutDashboard className="w-5 h-5" />
             <p className="text-sm font-bold">Command Center</p>
           </Link>
-          <Link href="#" className="flex items-center gap-3 px-3 py-2.5 rounded-xl text-slate-400 hover:bg-slate-800 hover:text-white transition-colors">
+          <Link href="/admin/clients" className="flex items-center gap-3 px-3 py-2.5 rounded-xl text-slate-400 hover:bg-slate-800 hover:text-white transition-colors">
             <Users className="w-5 h-5" />
             <p className="text-sm font-medium">Clients</p>
           </Link>
-          <Link href="#" className="flex items-center gap-3 px-3 py-2.5 rounded-xl text-slate-400 hover:bg-slate-800 hover:text-white transition-colors">
+          <Link href="/admin/projects" className="flex items-center gap-3 px-3 py-2.5 rounded-xl text-slate-400 hover:bg-slate-800 hover:text-white transition-colors">
             <Briefcase className="w-5 h-5" />
             <p className="text-sm font-medium">Projects</p>
           </Link>
-          <Link href="#" className="flex items-center gap-3 px-3 py-2.5 rounded-xl text-slate-400 hover:bg-slate-800 hover:text-white transition-colors">
+          <Link href="/admin/revenue" className="flex items-center gap-3 px-3 py-2.5 rounded-xl text-slate-400 hover:bg-slate-800 hover:text-white transition-colors">
             <Wallet className="w-5 h-5" />
             <p className="text-sm font-medium">Revenue</p>
           </Link>
-          <Link href="#" className="flex items-center gap-3 px-3 py-2.5 rounded-xl text-slate-400 hover:bg-slate-800 hover:text-white transition-colors mt-8">
+          <Link href="/admin/settings" className="flex items-center gap-3 px-3 py-2.5 rounded-xl text-slate-400 hover:bg-slate-800 hover:text-white transition-colors mt-8">
             <Settings className="w-5 h-5" />
             <p className="text-sm font-medium">Settings</p>
           </Link>

@@ -159,7 +159,7 @@ return (
               <div className="flex items-center gap-4">
                 <div className="w-12 h-12 bg-white dark:bg-gray-900 rounded-lg flex items-center justify-center border border-gray-200 dark:border-gray-700 shadow-sm shrink-0">
                   {/* Stripe SVG Logo */}
-                  <svg className="w-8 h-8 text-[#635BFF]" fill="currentColor" viewBox="0 0 24 24" title="Stripe Logo" role="img">
+                  <svg className="w-8 h-8 text-[#635BFF]" fill="currentColor" viewBox="0 0 24 24" role="img">
                     <path d="M13.962 8.475c0-1.077-.872-1.934-1.954-1.934-.635 0-1.18.291-1.52.74l-.004.004-3.567 4.757c-.126.168-.13.402-.01.57.12.169.317.261.517.261h3.35v3.152c0 1.077.872 1.934 1.954 1.934.635 0 1.18-.291 1.52-.74l.004-.004 3.567-4.757c.126-.168.13-.402.01-.57a.49.49 0 00-.517-.261h-3.35V8.475zM24 12c0 6.627-5.373 12-12 12S0 18.627 0 12 5.373 0 12 0s12 5.373 12 12z"></path>
                     <title>Stripe</title>
                   </svg>
