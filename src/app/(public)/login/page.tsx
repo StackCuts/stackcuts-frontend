@@ -11,6 +11,7 @@ import {
 } from "firebase/auth";
 import { doc, getDoc, setDoc, serverTimestamp } from "firebase/firestore";
 import { auth, db, googleProvider } from "@/lib/firebase";
+import { useAuth } from "@/lib/AuthContext";
 import {
   Layers,
   Mail,
@@ -33,6 +34,7 @@ export default function LoginPage() {
 
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
+  const { loading: authLoading } = useAuth();
 
   const handleGoogleSignIn = async () => {
     try {
@@ -41,7 +43,6 @@ export default function LoginPage() {
       const result = await signInWithPopup(auth, googleProvider);
       const user = result.user;
 
-      // Check if user exists in Firestore
       const userRef = doc(db, "users", user.uid);
       const userSnap = await getDoc(userRef);
 
@@ -56,7 +57,6 @@ export default function LoginPage() {
           createdAt: serverTimestamp(),
         });
 
-        // Create empty brand_vault document
         await setDoc(doc(db, "brand_vault", user.uid), {
           id: user.uid,
           primaryLogoUrl: "",
@@ -157,6 +157,14 @@ export default function LoginPage() {
   // Prevent hydration mismatch
   // eslint-disable-next-line react-hooks/set-state-in-effect
   useEffect(() => setMounted(true), []);
+
+  if (authLoading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-white dark:bg-gray-950">
+        <Loader2 className="w-8 h-8 animate-spin text-indigo-600" />
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen flex bg-white dark:bg-gray-950 transition-colors duration-300">
