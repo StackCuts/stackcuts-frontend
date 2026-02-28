@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/set-state-in-effect */
 "use client";
 import React, { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
@@ -73,6 +74,15 @@ export default function ClientDashboardPage() {
 
   const displayName =
     user?.displayName?.split(" ")[0] || user?.email?.split("@")[0] || "Client";
+
+  // Prevent Next.js Hydration Mismatch by waiting for client to mount
+  if (!mounted) {
+    return (
+      <div className="flex min-h-screen items-center justify-center bg-gray-50 dark:bg-slate-950">
+        <div className="animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-indigo-600"></div>
+      </div>
+    );
+  }
 
   return (
     <div className="flex bg-gray-50 dark:bg-slate-950 min-h-screen font-sans text-slate-900 dark:text-slate-100">
