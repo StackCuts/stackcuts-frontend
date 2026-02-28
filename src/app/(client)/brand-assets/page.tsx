@@ -362,10 +362,8 @@ export default function BrandAssetsPage() {
                     </span>
                     <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                       <div className="flex items-center gap-3 p-2.5 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 shadow-sm">
-                        <div
-                          className="h-8 w-8 rounded-full border border-black/10 dark:border-white/10 shadow-sm"
-                          style={{ backgroundColor: primaryColor }}
-                        ></div>
+                        <style>{`.bg-primary-custom { background-color: ${primaryColor}; }`}</style>
+                        <div className="h-8 w-8 rounded-full border border-black/10 dark:border-white/10 shadow-sm bg-primary-custom"></div>
                         <div className="flex flex-col">
                           <span className="text-[10px] uppercase font-bold text-gray-400">
                             Primary
@@ -380,10 +378,8 @@ export default function BrandAssetsPage() {
                         </div>
                       </div>
                       <div className="flex items-center gap-3 p-2.5 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 shadow-sm">
-                        <div
-                          className="h-8 w-8 rounded-full border border-black/10 dark:border-white/10 shadow-sm"
-                          style={{ backgroundColor: darkColor }}
-                        ></div>
+                        <style>{`.bg-dark-custom { background-color: ${darkColor}; }`}</style>
+                        <div className="h-8 w-8 rounded-full border border-black/10 dark:border-white/10 shadow-sm bg-dark-custom"></div>
                         <div className="flex flex-col">
                           <span className="text-[10px] uppercase font-bold text-gray-400">
                             Dark

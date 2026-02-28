@@ -327,12 +327,12 @@ export default function ClientDashboardPage() {
                             </span>
                           );
                           actionButton = (
-                            <Link
-                              href="#"
-                              className="inline-block text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 text-sm font-bold px-4 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-all"
+                            <button
+                              disabled
+                              className="inline-block text-gray-400 dark:text-gray-500 text-sm font-bold px-4 py-2 rounded-lg cursor-not-allowed"
                             >
-                              View Tracker
-                            </Link>
+                              Editing...
+                            </button>
                           );
                           break;
                         case "review":
@@ -344,7 +344,7 @@ export default function ClientDashboardPage() {
                           );
                           actionButton = (
                             <Link
-                              href="/review"
+                              href={`/review/${project.id}`}
                               className="inline-block border border-gray-200 dark:border-gray-700 text-slate-700 dark:text-slate-200 text-sm font-bold px-4 py-2 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-all shadow-sm"
                             >
                               Review Draft
@@ -352,6 +352,20 @@ export default function ClientDashboardPage() {
                           );
                           break;
                         case "handoff":
+                          statusBadge = (
+                            <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-bold bg-emerald-50 text-emerald-700 dark:bg-emerald-900/20 dark:text-emerald-400 border border-emerald-200 dark:border-emerald-800/50">
+                              <CheckCircle2 className="w-3.5 h-3.5" /> Approved
+                            </span>
+                          );
+                          actionButton = (
+                            <Link
+                              href={`/unlock/${project.id}`}
+                              className="inline-block bg-slate-900 dark:bg-white text-white dark:text-slate-900 text-sm font-bold px-4 py-2 rounded-lg hover:bg-slate-800 dark:hover:bg-gray-200 transition-all shadow-sm"
+                            >
+                              Unlock Campaign
+                            </Link>
+                          );
+                          break;
                         case "completed":
                         default:
                           statusBadge = (
@@ -361,10 +375,10 @@ export default function ClientDashboardPage() {
                           );
                           actionButton = (
                             <Link
-                              href="/final"
+                              href={`/final/${project.id}`}
                               className="inline-block text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 text-sm font-bold px-4 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-all"
                             >
-                              Unlock / Download
+                              Download Assets
                             </Link>
                           );
                           break;
