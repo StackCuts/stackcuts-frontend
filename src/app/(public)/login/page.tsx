@@ -74,7 +74,7 @@ export default function LoginPage() {
       if (role === "admin") {
         router.push("/admin");
       } else {
-        router.push("/project");
+        router.push("/dashboard");
       }
     } catch (err: any) {
       console.error("Google sign in error:", err);
@@ -108,7 +108,7 @@ export default function LoginPage() {
         if (role === "admin") {
           router.push("/admin");
         } else {
-          router.push("/project");
+          router.push("/dashboard");
         }
       } catch (signInErr: any) {
         // If user not found, try to sign up
@@ -142,7 +142,7 @@ export default function LoginPage() {
             updatedAt: serverTimestamp(),
           });
 
-          router.push("/project");
+          router.push("/dashboard");
         } else {
           throw signInErr; // Re-throw if it's a different error
         }
