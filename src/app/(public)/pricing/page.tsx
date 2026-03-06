@@ -51,7 +51,7 @@ export default function PricingPage() {
                   <li className="flex items-center gap-3 justify-center md:justify-start">
                     <CheckCircle2 className="text-indigo-600 w-6 h-6 shrink-0" />
                     <span className="text-slate-700 dark:text-slate-300 font-medium">
-                      1 High-Converting Video Ad
+                      1 High-Converting Video Ad (15-30s)
                     </span>
                   </li>
                   <li className="flex items-center gap-3 justify-center md:justify-start">
@@ -63,13 +63,13 @@ export default function PricingPage() {
                   <li className="flex items-center gap-3 justify-center md:justify-start">
                     <CheckCircle2 className="text-indigo-600 w-6 h-6 shrink-0" />
                     <span className="text-slate-700 dark:text-slate-300 font-medium">
-                      Scroll-Stopping UGC Hook
+                      Custom Digital Avatar Hook
                     </span>
                   </li>
                   <li className="flex items-center gap-3 justify-center md:justify-start">
                     <CheckCircle2 className="text-indigo-600 w-6 h-6 shrink-0" />
                     <span className="text-slate-700 dark:text-slate-300 font-medium">
-                      3-5 Day Turnaround
+                      3 - 5 Business Day Turnaround
                     </span>
                   </li>
                   <li className="flex items-center gap-3 justify-center md:justify-start">
