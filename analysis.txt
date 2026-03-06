@@ -1,0 +1,95 @@
+41: o=0 c=0 net=0 <header className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden">
+42: o=1 c=0 net=1 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+43: o=0 c=0 net=1 <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight text-slate-900 dark:text-white mb-6 text-balance">
+44: o=0 c=0 net=1 Direct Response Ads. Zero Meetings.{" "}
+45: o=0 c=0 net=1 <br className="hidden lg:block" />
+46: o=0 c=0 net=1 <span className="text-indigo-600 dark:text-indigo-500">
+47: o=0 c=0 net=1 Zero Filming.
+48: o=0 c=0 net=1 </span>
+49: o=0 c=0 net=1 </h1>
+50: o=0 c=0 net=1 <p className="max-w-2xl mx-auto text-lg md:text-xl text-gray-500 dark:text-gray-400 leading-relaxed mb-10">
+51: o=0 c=0 net=1 StackCuts is the async video agency for modern brands. We turn
+52: o=0 c=0 net=1 your existing assets into high-converting hybrid ads in 3-5
+53: o=0 c=0 net=1 business days—without the hassle of filming.
+54: o=0 c=0 net=1 </p>
+55: o=1 c=0 net=2 <div className="flex flex-col items-center justify-center mb-20">
+56: o=1 c=0 net=3 <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-4">
+57: o=0 c=0 net=3 <Link
+58: o=0 c=0 net=3 href="/start-project"
+59: o=0 c=0 net=3 className="w-full sm:w-auto px-8 py-4 bg-indigo-600 text-white font-bold rounded-lg shadow-lg hover:shadow-indigo-500/20 hover:bg-indigo-700 transition-all"
+60: o=0 c=0 net=3 >
+61: o=0 c=0 net=3 Start Your Project
+62: o=0 c=0 net=3 </Link>
+63: o=0 c=0 net=3 <Link
+64: o=0 c=0 net=3 href="/storyboard"
+65: o=0 c=0 net=3 className="w-full sm:w-auto px-8 py-4 bg-white dark:bg-gray-900 text-slate-900 dark:text-white font-semibold rounded-lg border border-gray-200 dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-gray-800 transition-all"
+66: o=0 c=0 net=3 >
+67: o=0 c=0 net=3 ✨ Generate Free AI Storyboard
+68: o=0 c=0 net=3 </Link>
+69: o=0 c=1 net=2 </div>
+70: o=0 c=0 net=2 <p className="text-sm text-gray-500 dark:text-gray-400 font-medium">
+71: o=0 c=0 net=2 🔒 100% Money-Back Guarantee on Script Approval
+72: o=0 c=0 net=2 </p>
+73: o=0 c=1 net=1 </div>
+75: o=0 c=0 net=1 {/* Hero Mockup */}
+76: o=1 c=0 net=2 <div className="relative max-w-4xl mx-auto perspective-[1000px]">
+77: o=1 c=0 net=3 <div className="rounded-xl overflow-hidden shadow-2xl dark:shadow-indigo-500/10 border border-gray-100 dark:border-gray-800 bg-white dark:bg-gray-900 p-2 transform rotateX-2">
+78: o=1 c=0 net=4 <div className="bg-gray-50 dark:bg-gray-950 border-b border-gray-100 dark:border-gray-800 p-3 flex items-center justify-between rounded-t-lg">
+79: o=1 c=0 net=5 <div className="flex space-x-1.5">
+80: o=1 c=1 net=5 <div className="w-3 h-3 rounded-full bg-red-400 dark:bg-red-500"></div>
+81: o=1 c=1 net=5 <div className="w-3 h-3 rounded-full bg-yellow-400 dark:bg-yellow-500"></div>
+82: o=1 c=1 net=5 <div className="w-3 h-3 rounded-full bg-green-400 dark:bg-green-500"></div>
+83: o=0 c=1 net=4 </div>
+84: o=1 c=0 net=5 <div className="bg-white dark:bg-gray-900 px-4 py-1 rounded text-[10px] text-gray-400 dark:text-gray-500 border border-gray-200 dark:border-gray-800">
+85: o=0 c=0 net=5 stackcuts.com/dashboard/project-v1
+86: o=0 c=1 net=4 </div>
+87: o=1 c=1 net=4 <div className="w-10"></div>
+88: o=0 c=1 net=3 </div>
+89: o=1 c=0 net=4 <div className="flex flex-col md:flex-row bg-white dark:bg-gray-900 aspect-video md:aspect-auto">
+90: o=0 c=0 net=4 <aside className="hidden md:block w-48 border-r border-gray-100 dark:border-gray-800 p-4 text-left">
+91: o=1 c=1 net=4 <div className="h-2 w-20 bg-gray-100 dark:bg-gray-800 rounded mb-4"></div>
+92: o=1 c=0 net=5 <div className="space-y-2">
+93: o=1 c=0 net=6 <div className="h-6 w-full bg-indigo-50 dark:bg-indigo-900/30 rounded text-[10px] text-indigo-600 dark:text-indigo-400 flex items-center px-2 font-medium">
+94: o=0 c=0 net=6 Script Generation
+95: o=0 c=1 net=5 </div>
+96: o=1 c=0 net=6 <div className="h-6 w-full hover:bg-gray-50 dark:hover:bg-gray-800/50 rounded text-[10px] text-gray-500 dark:text-gray-400 flex items-center px-2">
+97: o=0 c=0 net=6 The UGC Hook
+98: o=0 c=1 net=5 </div>
+99: o=1 c=0 net=6 <div className="h-6 w-full hover:bg-gray-50 dark:hover:bg-gray-800/50 rounded text-[10px] text-gray-500 dark:text-gray-400 flex items-center px-2">
+100: o=0 c=0 net=6 UI Screencast & Montage
+101: o=0 c=1 net=5 </div>
+102: o=1 c=0 net=6 <div className="h-6 w-full hover:bg-gray-50 dark:hover:bg-gray-800/50 rounded text-[10px] text-gray-500 dark:text-gray-400 flex items-center px-2">
+103: o=0 c=0 net=6 CTA
+104: o=0 c=1 net=5 </div>
+105: o=1 c=0 net=6 <div className="h-6 w-full hover:bg-gray-50 dark:hover:bg-gray-800/50 rounded text-[10px] text-gray-500 dark:text-gray-400 flex items-center px-2">
+106: o=0 c=0 net=6 Final Ad Delivery
+107: o=0 c=1 net=5 </div>
+108: o=0 c=1 net=4 </div>
+109: o=0 c=0 net=4 </aside>
+110: o=0 c=0 net=4 <main className="flex-1 p-6 bg-gray-50/50 dark:bg-gray-950/50 flex flex-col items-center justify-center relative">
+111: o=1 c=0 net=5 <div className="w-full max-w-2xl aspect-video bg-gray-200 dark:bg-gray-800 rounded-lg relative flex items-center justify-center overflow-hidden border border-gray-100 dark:border-gray-700">
+112: o=0 c=0 net=5 {/* Using a solid color placeholder since original external image links were broken */}
+113: o=1 c=1 net=5 <div className="absolute inset-0 bg-gradient-to-tr from-indigo-100 to-purple-100 dark:from-indigo-900/20 dark:to-purple-900/20 opacity-50"></div>
+114: o=0 c=0 net=5 <button
+115: o=0 c=0 net=5 aria-label="Play video"
+116: o=0 c=0 net=5 className="z-10 bg-indigo-600 w-16 h-16 rounded-full flex items-center justify-center shadow-xl hover:scale-105 active:scale-95 transition-transform group"
+117: o=0 c=0 net=5 >
+118: o=0 c=0 net=5 <Play className="w-6 h-6 text-white ml-1 group-hover:fill-current" />
+119: o=0 c=0 net=5 </button>
+120: o=1 c=0 net=6 <div className="absolute bottom-4 left-4 right-4 h-1.5 bg-white/50 dark:bg-black/50 rounded-full overflow-hidden">
+121: o=1 c=1 net=6 <div className="h-full bg-indigo-600 w-1/3"></div>
+122: o=0 c=1 net=5 </div>
+123: o=0 c=1 net=4 </div>
+124: o=0 c=0 net=4 </main>
+125: o=0 c=1 net=3 </div>
+126: o=0 c=1 net=2 </div>
+127: o=0 c=1 net=1 </div>
+128: o=0 c=1 net=0 </div>
+129: o=0 c=0 net=0 </header>
+130: o=0 c=0 net=0 {/* Trusted By Section */}
+131: o=0 c=0 net=0 <section className="py-12 border-y border-gray-100 dark:border-gray-800 bg-white dark:bg-gray-900">
+132: o=1 c=0 net=1 <div className="max-w-7xl mx-auto px-4 text-center">
+133: o=0 c=0 net=1 <p className="text-xs font-bold uppercase tracking-widest text-gray-400 dark:text-gray-500 mb-8">
+134: o=0 c=0 net=1 Trusted by modern growth teams
+135: o=0 c=0 net=1 </p>
+136: o=1 c=0 net=2 <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-50 grayscale dark:opacity-30 dark:invert">
